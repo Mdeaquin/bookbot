@@ -11,12 +11,11 @@ def main():
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {book_path}")
     print("----------- Word Count ----------")
-    print(f"{count} words found in the document")
+    print(f"Found {count} total words")
     print("--------- Character Count -------")
     for dict in sorted_chars:
-        for k,v in dict:
-            if dict[k].isalpha() == True:
-                print(f"{dict[k]}: {dict[v]}")
+        if dict['char'].isalpha() == True:
+            print(f"{dict['char']}: {dict['value']}")
     print("============= END ===============")
 
 def get_book_text(path):
