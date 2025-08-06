@@ -9,10 +9,7 @@ def get_book_text(path):
         return f.read()
 
 def get_book_words(book_string):
-    word_count = 0
     words = book_string.split()
-    for word in words:
-        word_count += 1
-    return word_count
+    return len(words)
 
 main()
