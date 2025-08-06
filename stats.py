@@ -11,3 +11,8 @@ def num_char_appear(book_string):
         else:
             char_count[char] = 1
     return char_count
+
+def sort_chars(char_count):
+    dict_list = [{'char': c, 'value': v} for c,v in char_count.items()]
+    dict_list.sort(key=lambda dict: dict['value'], reverse=True)
+    return dict_list
